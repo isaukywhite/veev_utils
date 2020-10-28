@@ -6,12 +6,21 @@ Pacote de utilitarios VeeV.
 
 Funções:
 
-    CepClass.getCep(String cep);
+    Cep.buscar(String cep);
         Retorna os dados do Cep informado para busca.
 
-    CpfValidatorClass.validar(String cpf);
+    Cpf.validar(String cpf);
         Retorna true(válido) ou false(inválido) para o cpf digitado.
 
-    NumerosString.extrairNumeros(String texto);
+    Extrair().numeros(String texto);
         Retorna String com os numeros que estao no texto informado.
+    
+    Extrair().lapd(String texto, int qtd);
+        Retorna zeros a esquerda de String de acordo com a quantidade de caracteres informada em "qtd";
+
+    Extrair().dataParaTexto(DateTime data);
+        Retorna String formatada ('01/01/2020') de acordo com a data informada;
+    
+    Extrair().textoParaData(String data);
+        Retorna DateTime de acordo com a String informada ('01/01/2020');
     

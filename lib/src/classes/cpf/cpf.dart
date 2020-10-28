@@ -1,4 +1,4 @@
-import 'package:veev_utils/src/classes/conversores/numeros_string.dart';
+import 'package:veev_utils/src/classes/conversores/extrair.dart';
 
 ///Valida Cpf retornando:
 /// - true
@@ -9,11 +9,11 @@ import 'package:veev_utils/src/classes/conversores/numeros_string.dart';
 /// Nao precisa tratar os pontos traços ou espaços,
 /// já é feito o tratamento com a classe NumerosString:
 /// - NumerosString().extrairNumeros(cpf);
-class CpfValidatorClass {
+class Cpf {
   ///Funcao para validar
   validar(String cpf) {
     ///Retorna apenas os digitos do CPF
-    cpf = NumerosString().extrairNumeros(cpf);
+    cpf = Extrair().numeros(cpf);
     if (cpf.length != 11) {
       return false;
     }

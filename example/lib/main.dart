@@ -23,7 +23,7 @@ class _ExamplePageState extends State<ExamplePage> {
       body: ListView(
         children: [
           FutureBuilder(
-            future: CepClass.getCep('01001000'),
+            future: Cep.buscar('01001000'),
             builder: (context, snapshot) {
               return Text(snapshot.data == null ? '' : snapshot.data.bairro);
             },
@@ -32,14 +32,14 @@ class _ExamplePageState extends State<ExamplePage> {
             child: Text('Extraindo numeros'),
             onPressed: () {
               String teste = '12aasd912a1';
-              print(NumerosString().extrairNumeros(teste));
+              print(Extrair().numeros(teste));
             },
           ),
           RaisedButton(
             child: Text('Validando CPF'),
             onPressed: () {
               String cpf = '11111111111';
-              print(CpfValidatorClass().validar(cpf));
+              print(Cpf().validar(cpf));
             },
           ),
         ],
