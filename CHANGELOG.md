@@ -1,3 +1,6 @@
+## [0.0.4] - Correcao reame.
+
+* Correção readme
 ## [0.0.3] - Funções para validar Cpf e extrair numeros de uma String implementadas.
 
 * Validar CPF adicionado.
