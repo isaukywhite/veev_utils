@@ -20,13 +20,29 @@ class _ExamplePageState extends State<ExamplePage> {
         title: Text('Example'),
         centerTitle: true,
       ),
-      body: Center(
-        child: FutureBuilder(
-          future: CepClass.getCep('01001000'),
-          builder: (context, snapshot) {
-            return Text(snapshot.data == null ? '' : snapshot.data.bairro);
-          },
-        ),
+      body: ListView(
+        children: [
+          FutureBuilder(
+            future: CepClass.getCep('01001000'),
+            builder: (context, snapshot) {
+              return Text(snapshot.data == null ? '' : snapshot.data.bairro);
+            },
+          ),
+          RaisedButton(
+            child: Text('Extraindo numeros'),
+            onPressed: () {
+              String teste = '12aasd912a1';
+              print(NumerosString().extrairNumeros(teste));
+            },
+          ),
+          RaisedButton(
+            child: Text('Validando CPF'),
+            onPressed: () {
+              String cpf = '11111111111';
+              print(CpfValidatorClass().validar(cpf));
+            },
+          ),
+        ],
       ),
     );
   }

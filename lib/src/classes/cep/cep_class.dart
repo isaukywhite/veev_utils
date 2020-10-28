@@ -2,15 +2,34 @@ import 'package:veev_utils/src/classes/cep/cep_repository.dart';
 
 ///Classe para receber os dados do Cep
 class CepClass {
+  ///Recebe CEP formatado
   final String cep;
+
+  ///Recebe Rua
   final String logradouro;
+
+  ///Recebe Complemento
   final String complemento;
+
+  ///Recebe Bairro
   final String bairro;
+
+  ///Recebe Cidade/Localidade
   final String localidade;
+
+  ///Recebe Estado(UF)
   final String uf;
+
+  ///Recebe numero do IBGE
   final String ibge;
+
+  ///Retorna a gia
   final String gia;
+
+  ///Retorna o ddd utilizado na area
   final String ddd;
+
+  ///sRetorna o siafi
   final String siafi;
 
   ///Construtor da Classe do Cep

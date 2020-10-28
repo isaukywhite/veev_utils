@@ -2,13 +2,15 @@
 
 Pacote de utilitarios VeeV.
 
-## Getting Started
+## Começando
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+Funções:
+    CepClass.getCep(String cep);
+        Retorna os dados do Cep informado para busca.
+        
+    CpfValidatorClass.validar(String cpf);
+        Retorna true(válido) ou false(inválido) para o cpf digitado.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+    NumerosString.extrairNumeros(String texto);
+        Retorna String com os numeros que estao no texto informado.
+    
