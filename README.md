@@ -15,7 +15,7 @@ Funções:
     Extrair().numeros(String texto);
         Retorna String com os numeros que estao no texto informado.
     
-    Extrair().lapd(String texto, int qtd);
+    Extrair().lpad(String texto, int qtd);
         Retorna zeros a esquerda de String de acordo com a quantidade de caracteres informada em "qtd";
 
     Extrair().dataParaTexto(DateTime data);
