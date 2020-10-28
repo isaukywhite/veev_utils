@@ -42,6 +42,26 @@ class _ExamplePageState extends State<ExamplePage> {
               print(Cpf().validar(cpf));
             },
           ),
+          RaisedButton(
+            child: Text('Data para Texto'),
+            onPressed: () {
+              print(Extrair().dataParaTexto(DateTime.now()));
+            },
+          ),
+          RaisedButton(
+            child: Text('Texto para Data'),
+            onPressed: () {
+              String texto = '01/01/2020';
+              print(Extrair().textoParaData(texto));
+            },
+          ),
+          RaisedButton(
+            child: Text('Zeros a esquerda'),
+            onPressed: () {
+              String texto = '1';
+              print(Extrair().lpad(texto, 6));
+            },
+          ),
         ],
       ),
     );
