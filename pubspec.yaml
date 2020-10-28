@@ -1,5 +1,5 @@
 name: veev_utils
-description: Utilitarios VeeV Sistemas
+description: Esse pacote irá conter os principais utilitarios e facilitadores para os apps, sites e programas da VeeV Sistemas.
 version: 0.0.1
 homepage: https://github.com/isaukywhite/veev_utils
 

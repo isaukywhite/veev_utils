@@ -1,5 +1,6 @@
 import 'package:veev_utils/src/classes/cep/cep_repository.dart';
 
+///Classe para receber os dados do Cep
 class CepClass {
   final String cep;
   final String logradouro;
@@ -12,6 +13,7 @@ class CepClass {
   final String ddd;
   final String siafi;
 
+  ///Construtor da Classe do Cep
   CepClass(
       {this.cep,
       this.logradouro,
@@ -24,6 +26,7 @@ class CepClass {
       this.ddd,
       this.siafi});
 
+  ///Factory da Classe para transformar Map<String, dynamic> em CepClass
   factory CepClass.fromJson(Map<String, dynamic> json) {
     return CepClass(
       cep: json['cep'],
@@ -39,6 +42,7 @@ class CepClass {
     );
   }
 
+  ///Transforma a Classe em um Map
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['cep'] = this.cep;
@@ -54,6 +58,7 @@ class CepClass {
     return data;
   }
 
+  ///Busca os dados passando a String cep informada para o CepRepository
   static Future<CepClass> getCep(String cep) async {
     return CepRepository().getViaCep(cep);
   }
