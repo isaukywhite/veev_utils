@@ -5,9 +5,10 @@ Pacote de utilitarios VeeV.
 ## Começando
 
 Funções:
+
     CepClass.getCep(String cep);
         Retorna os dados do Cep informado para busca.
-        
+
     CpfValidatorClass.validar(String cpf);
         Retorna true(válido) ou false(inválido) para o cpf digitado.
 
