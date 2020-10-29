@@ -1,3 +1,7 @@
+## [0.0.6] - Converter double em dinheiro adicionado.
+
+* Converter double em dinheiro.
+
 ## [0.0.5] - Novos recursos e alterações de funcoes.
 
 * Lpad.

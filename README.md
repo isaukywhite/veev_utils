@@ -9,7 +9,7 @@ Funções:
     Cep.buscar(String cep);
         Retorna os dados do Cep informado para busca.
 
-    Cpf.validar(String cpf);
+    Cpf().validar(String cpf);
         Retorna true(válido) ou false(inválido) para o cpf digitado.
 
     Extrair().numeros(String texto);
@@ -24,3 +24,5 @@ Funções:
     Extrair().textoParaData(String data);
         Retorna DateTime de acordo com a String informada ('01/01/2020');
     
+    Extrair().paraDinheiro(double value, int decimal);
+        Retorna String formatada para dinheiro com o numero de casas decimais informada.

@@ -28,24 +28,18 @@ class Extrair {
   }
 
   ///Adiciona zeros a esquerda de uma String
-  String lpad(String texto, int qtd) {
-    ///quantidade de zeros para adicionar na string
-    int zeros = qtd - texto.length;
-    if (zeros < 0) {
-      zeros = 0;
+  String lpad(String texto, int decimal) {
+    int qtdZeros = decimal - texto.length;
+    if (qtdZeros < 0) {
+      qtdZeros = 0;
     }
-
-    ///String com os dados da resposta
-    String resposta = '';
-
-    ///Para cada zero adiciona um zero no inicio da String
-    for (int i = 0; i < zeros; i++) {
-      resposta += '0';
+    String zeros = 0.toStringAsFixed(qtdZeros);
+    if (zeros == '0') {
+      zeros = '';
+    } else {
+      zeros = zeros.replaceAll('0.', '');
     }
-
-    ///Pega a string com os zeros e coloca o texto principal
-    resposta += texto;
-    return resposta;
+    return '$zeros$texto';
   }
 
   ///Tresnforma DateTime em String formatada
@@ -86,5 +80,17 @@ class Extrair {
     } catch (e) {
       return null;
     }
+  }
+
+  ///Recebe um double e retorna essa valor em formato de dinheiro
+  ///
+  ///Os parametros são:
+  /// - double value  == valor para transformar.
+  /// - int decimal == quantos zeros apos a virgula.
+  String paraDinheiro(double value, {int decimal}) {
+    if (decimal == null) {
+      decimal = 2;
+    }
+    return 'R\$${numeros(value.toStringAsFixed(decimal).replaceAll('.', ','))}';
   }
 }
