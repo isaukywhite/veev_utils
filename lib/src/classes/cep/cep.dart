@@ -79,6 +79,9 @@ class Cep {
 
   ///Busca os dados passando a String cep informada para o CepRepository
   static Future<Cep> buscar(String cep) async {
+    if (cep == null) {
+      return Cep();
+    }
     return CepRepository().getViaCep(cep);
   }
 }

@@ -14,6 +14,9 @@ class Cpf {
   validar(String cpf) {
     ///Retorna apenas os digitos do CPF
     cpf = Extrair().numeros(cpf);
+    if (cpf == null) {
+      return false;
+    }
     if (cpf.length != 11) {
       return false;
     }

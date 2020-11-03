@@ -1,3 +1,7 @@
+## [0.0.7] - Correções e testes adicionados.
+
+* Correção de bugs quando passa nulo para funções e testes automatizados adicionados.
+
 ## [0.0.6] - Converter double em dinheiro adicionado.
 
 * Converter double em dinheiro.

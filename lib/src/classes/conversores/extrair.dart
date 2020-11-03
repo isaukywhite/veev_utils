@@ -29,6 +29,9 @@ class Extrair {
 
   ///Adiciona zeros a esquerda de uma String
   String lpad(String texto, int decimal) {
+    if (texto == null || decimal == null) {
+      return null;
+    }
     int qtdZeros = decimal - texto.length;
     if (qtdZeros < 0) {
       qtdZeros = 0;
@@ -88,9 +91,12 @@ class Extrair {
   /// - double value  == valor para transformar.
   /// - int decimal == quantos zeros apos a virgula.
   String paraDinheiro(double value, {int decimal}) {
+    if (value == null) {
+      return null;
+    }
     if (decimal == null) {
       decimal = 2;
     }
-    return 'R\$${numeros(value.toStringAsFixed(decimal).replaceAll('.', ','))}';
+    return 'R\$${value.toStringAsFixed(decimal).replaceAll('.', ',')}';
   }
 }
